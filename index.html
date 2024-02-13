@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title> App 3 by Kamal Sir </title>
+	<style>
+		* { font-size:30px;}
+	</style>
+	<script>
+		function show()
+		{
+			event.preventDefault();
+			let name = document.getElementById("id_name");
+			let msg = document.getElementById("id_msg");
+
+			let d = new Date();
+			let hr = d.getHours();
+			let ans = "";
+			if (hr < 12)		ans = "GM";
+			else if (hr < 16)	ans = "GA";
+			else			ans = "GE";
+			
+			ans = ans + " " + name.value;
+	 		msg.innerHTML = ans;
+		}		
+	</script>
+</head>
+<body>
+<center>
+	<h1> Welcome App </h1>
+	<form onsubmit="show()">
+	<input type="text" placeholder="enter ur name" id="id_name"/>
+	<br><br>
+	<input type="submit" />
+	</form>
+	<h2 id="id_msg" />
+</center>
+</body>
+</html>
+
+
+
+
+
